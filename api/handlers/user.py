@@ -32,6 +32,12 @@ def create_user():
 @app.route("/users/<int:user_id>", methods=["PUT"])
 @multi_auth.login_required(role="admin")
 def edit_user(user_id):
+    """
+    Get User by id
+    ----
+    tag:
+        - Users
+    """
     user_data = request.json
     user = get_object_or_404(UserModel, user_id)
     user.username = user_data["username"]
