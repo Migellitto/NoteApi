@@ -11,5 +11,6 @@ def get_object_or_404(model: db.Model, object_id: int):
     object = model.query.get(object_id)
     if object is None:
         abort(
-            404, description=f"{model.__name__.removesuffix('Model')} with id={object_id} not found")
+            404, description=f"{model.__name__.removesuffix('Model')} with id={object_id} not found"
+        )
     return object

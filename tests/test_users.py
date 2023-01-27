@@ -71,3 +71,4 @@ def test_user_delete(client, user, auth_headers):
     assert response.status_code == 200
     response = client.delete(f'/users/100', headers=auth_headers)
     assert response.status_code == 404
+    # DONE: реализуйте тест на удаление пользователя и запустите его, убрав декоратор @pytest.mark.skip

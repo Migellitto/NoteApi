@@ -9,6 +9,7 @@ from api.handlers import auth, note, user
 # Update --> PUT
 # Delete --> DELETE
 
+
 docs.register(user.get_user_by_id)
 
 if __name__ == '__main__':
